@@ -1,0 +1,5 @@
+# mysql
+## 主要命令行
+- select version();	 查看服务器版本 5.7版本支持json
+- 
+- mysql -uroot -p 密码登陆服务器
