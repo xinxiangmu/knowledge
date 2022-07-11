@@ -3,3 +3,6 @@
 - select version();	 查看服务器版本 5.7版本支持json
 - 
 - mysql -uroot -p 密码登陆服务器
+- mysql json 使用语法 https://www.cnblogs.com/xxhxs-21/p/15897248.html
+- json 需要虚拟索引，提升性能
+https://www.csdn.net/tags/OtTaEgysODQzMS1ibG9n.html
