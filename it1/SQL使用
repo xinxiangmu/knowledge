@@ -8,7 +8,7 @@
  
 - json 需要虚拟索引，提升性能
 https://www.csdn.net/tags/OtTaEgysODQzMS1ibG9n.html
-
+- 注解的代码需要注意，因为有些可能会在真正的代码执行之前做验证，这个就是注解内部给做的操作，所以需要注意，如果有全局异常处理的类，会出现这个问题
 
 - Type handler was null on parameter mapping for property 'fSceneInfo'. It was either not specified and/or could not be found for the javaType (java.util.List) : jdbcType (VARCHAR) combination.
 mybaits 对象需要执行type处理器，所有使用此字段key的地方都需要配置，配置不同的地方格式不一样，需要注意细节
