@@ -15,4 +15,32 @@ mybaits 对象需要执行type处理器，所有使用此字段key的地方都�
 - xml中是这样的，    <result column="f_scene_info" jdbcType="VARCHAR"  property="fSceneInfo"  typeHandler="com.huobi.global.util.MySqlJsonHandler"  />
 - 其他的是这样的，需要注意细节f_scene_info = #{fSceneInfo,jdbcType=VARCHAR,typeHandler=com.huobi.global.util.MySqlJsonHandler}
 
+@MappedJdbcTypes({JdbcType.VARCHAR})
+@Slf4j
+@Component
+@MappedTypes({List.class, IntelligentWorkOrderConfigExample.class})
+public class MySqlJsonHandler<T extends Object> extends BaseTypeHandler<T> {
 
+
+    private Class<T> clazz;
+    @Override
+    public void setNonNullParameter(PreparedStatement preparedStatement, int i, T t, JdbcType jdbcType) throws SQLException {
+
+        preparedStatement.setString(i,JSONObject.toJSONString(t));
+    }
+
+    @Override
+    public T getNullableResult(ResultSet resultSet, String s) throws SQLException {
+        return JSONObject.parseObject(resultSet.getString(s),clazz);
+    }
+
+    @Override
+    public T getNullableResult(ResultSet resultSet, int i) throws SQLException {
+        return JSONObject.parseObject(resultSet.getString(i),clazz);
+    }
+
+    @Override
+    public T getNullableResult(CallableStatement callableStatement, int i) throws SQLException {
+        return JSONObject.parseObject(callableStatement.getString(i),clazz);
+    }
+}
