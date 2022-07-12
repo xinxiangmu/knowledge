@@ -4,5 +4,15 @@
 - 
 - mysql -uroot -p 密码登陆服务器
 - mysql json 使用语法 https://www.cnblogs.com/xxhxs-21/p/15897248.html
+ - https://www.cnblogs.com/inkyi/p/15745242.html
+ 
 - json 需要虚拟索引，提升性能
 https://www.csdn.net/tags/OtTaEgysODQzMS1ibG9n.html
+
+
+- Type handler was null on parameter mapping for property 'fSceneInfo'. It was either not specified and/or could not be found for the javaType (java.util.List) : jdbcType (VARCHAR) combination.
+mybaits 对象需要执行type处理器，所有使用此字段key的地方都需要配置，配置不同的地方格式不一样，需要注意细节
+- xml中是这样的，    <result column="f_scene_info" jdbcType="VARCHAR"  property="fSceneInfo"  typeHandler="com.huobi.global.util.MySqlJsonHandler"  />
+- 其他的是这样的，需要注意细节f_scene_info = #{fSceneInfo,jdbcType=VARCHAR,typeHandler=com.huobi.global.util.MySqlJsonHandler}
+
+
