@@ -1,0 +1,5 @@
+- git checkout brands获取分支
+- git pull 获取最新代码
+- git push 提交代码
+- git merge master 将主干代码master到当前checkout的分支
+-
