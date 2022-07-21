@@ -1,3 +1,4 @@
 - 需要清楚目前的业务，以及使用的技术栈，最主要的是网络拓扑需要知道，目前的分布式、容器、代理等技术会让异常挖掘考虑较多的场景
 - module java.base does not "opens java.lang" to unnamed  https://zhuanlan.zhihu.com/p/460293670  --add-opens java.base/java.lang=ALL-UNNAMED
 - 生成jks等证书 https://core.telegram.org/bots/self-signed#java-keystore
+- dubbo qos 启动才会有ls等服务的查看，这样可以监控服务质量 dubbo.application.qos.enable=true
