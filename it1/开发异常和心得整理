@@ -2,3 +2,6 @@
 - module java.base does not "opens java.lang" to unnamed  https://zhuanlan.zhihu.com/p/460293670  --add-opens java.base/java.lang=ALL-UNNAMED
 - 生成jks等证书 https://core.telegram.org/bots/self-signed#java-keystore
 - dubbo qos 启动才会有ls等服务的查看，这样可以监控服务质量 dubbo.application.qos.enable=true
+- 2022-07-21 15:32:35.602  INFO 51132 --- [           main] o.a.d.r.zookeeper.ZookeeperRegistry      :  [DUBBO] Loaded registry cache file /Users/xx/.dubbo/dubbo-registry-service-edi-tctest-zk-t2-1.tc-jp1.xx.com-2181.cache, dubbo version: 3.0.8, current host: 10.150.100.92
+dubbode client缓存地址是这个，需要注意。如果老是链接
+
