@@ -1,3 +1,7 @@
 # 常见问题
 在install 安装的过程中idea的插件不行，需要使用这个执行
 https://blog.csdn.net/gao_zhennan/article/details/89713407
+- maven 时报错The packaging for this project did not assign a file to the build artifact 
+主要是因为idea插件和mvn之间的区别，查看这个  https://www.cnblogs.com/Jeely/p/11301162.html 
+- mvn clean install mvn clean install:install 区别是前者是install，后者是执行的目标，所以需要注意
+
