@@ -7,5 +7,9 @@ dubbode client缓存地址是这个，可能是cura这个客户端的版本问�
 - 不同的注解参数含义 https://blog.csdn.net/Captain249/article/details/90764616?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-2-90764616-null-null.pc_agg_new_rank&utm_term=pathparam%E5%92%8Crequestparam%E7%9A%84%E5%8C%BA%E5%88%AB&spm=1000.2123.3001.4430
 -  Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. 
 - https://www.cnblogs.com/softidea/p/14467492.html 参考
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-all</artifactId>
+</dependency>
 
 
