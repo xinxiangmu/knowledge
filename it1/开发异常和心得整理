@@ -12,4 +12,9 @@ dubbode client缓存地址是这个，可能是cura这个客户端的版本问�
     <artifactId>netty-all</artifactId>
 </dependency>
 
-
+-seq 1 200 | xargs -n1 -P10 curl -v "http://localhost:8080/api-crm/v1/systemsetting/getSettingParam" 实现curl的多并发操作
+- spring的requestbody是json格式，可以自动转换为bean，借助于jackson的注解JsonProperty 可以实现别名处理
+- spring针对get的请求，因为是kv键值对，所以无法借助jackson的操作，所以需要注意无法别名处理，只能人工处理
+-  JsonToken.START_OBJECT deserialize 主要使用的是bean的序列化器，会导致无法直接到string
+- 注解使用会自动生成代码，但是在开发端是不直接感知的，所以报错需要注意，需要查看class文件确认具体的最终代码以及处理的结果
+-LambdaQueryWrapper 实现参数的动态添加，需要使用具体方法的condition参数，例如new LambdaQueryWrapper<EvaluationResult>().eq(1，2，3）1参数实现判断是否生效
